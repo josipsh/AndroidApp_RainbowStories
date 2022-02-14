@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnArrowBackward"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/arrow_backward"
+            android:layout_marginEnd="30dp"
+            android:background="?android:attr/windowBackground"/>
+
+
+        <TextView
+            android:id="@+id/tvHeaderDayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="monday"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+
+        <ImageButton
+            android:id="@+id/btnArrowForward"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/arrow_forward"
+            android:layout_marginStart="30dp"
+            android:background="?android:attr/windowBackground"/>
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_margin="@dimen/progress_bar_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:indeterminate="true"
+        app:showAnimationBehavior="none"
+        style="@style/AppTheme.ProgressBar"
+
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/etNothingToShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nothing_to_show"
+        android:gravity="center"
+        android:textSize="@dimen/nothing_to_show_text_size"
+        android:layout_margin="@dimen/nothing_to_show_margin"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDayTasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/task_item"/>
+
+</LinearLayout>

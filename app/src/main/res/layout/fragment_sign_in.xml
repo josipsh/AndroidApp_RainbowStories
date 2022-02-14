@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/sign_in_margin"
+    tools:context=".ui.SignInFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etUserName"
+        style="@style/AppTheme.TextFieldLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sign_in_text_field_margin_top"
+        android:hint="@string/email"
+        android:theme="@style/AppTheme.TextFieldLayoutTheme"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPassword"
+        style="@style/AppTheme.TextFieldLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:theme="@style/AppTheme.TextFieldLayoutTheme"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/etUserName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogIn"
+        style="@style/AppTheme.NormalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+
+        app:layout_constraintBottom_toTopOf="@id/btnRegister"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        style="@style/AppTheme.NormalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="10dp" />
+
+
+    <Button
+        android:id="@+id/btnSignIn"
+        style="@style/AppTheme.NormalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sign_in_btn_margin_top"
+        android:text="@string/sign_in_with_google"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btnSignUp" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        style="@style/AppTheme.NormalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sign_in_btn_margin_top"
+        android:text="@string/sign_up_with_google"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressBar"
+        style="@style/AppTheme.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/progress_bar_margin"
+        android:indeterminate="true"
+        android:visibility="gone"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:showAnimationBehavior="none"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

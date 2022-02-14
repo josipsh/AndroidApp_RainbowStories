@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragments"
+    app:startDestination="@id/menuDiscover">
+
+    <fragment
+        android:id="@+id/menuDiscover"
+        android:name="hr.rainbow.ui.DiscoverStoriesFragment"
+        android:label="@string/menu_title_discover"
+        tools:layout="@layout/fragment_discover_stories" />
+
+    <fragment
+        android:id="@+id/menuMyStories"
+        android:name="hr.rainbow.ui.MyStoriesFragment"
+        android:label="@string/menu_title_my_stories"
+        tools:layout="@layout/fragment_my_stories" />
+
+    <fragment
+        android:id="@+id/menuFavoriteStories"
+        android:name="hr.rainbow.ui.FavoriteStoriesFragment"
+        android:label="@string/menu_title_favorites"
+        tools:layout="@layout/fragment_favorite_stories" />
+
+    <fragment
+        android:id="@+id/menuScheduler"
+        android:name="hr.rainbow.ui.SchedulerFragment"
+        android:label="@string/menu_title_scheduler"
+        tools:layout="@layout/fragment_scheduler" />
+
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="hr.rainbow.ui.ProfileFragment"
+        android:label="@string/option_menu_title_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_menuProfile_to_menuChangePassword"
+            app:destination="@id/menuChangePassword" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuChangePassword"
+        android:name="hr.rainbow.ui.ChangePasswordFragment"
+        android:label="@string/option_menu_change_password"
+        tools:layout="@layout/fragment_change_password" />
+
+    <fragment
+        android:id="@+id/menuPictureGallery"
+        android:name="hr.rainbow.ui.PictureGalleryFragment"
+        android:label="@string/option_menu_title_pictureGallery"
+        tools:layout="@layout/fragment_picture_gallery" >
+        <action
+            android:id="@+id/action_menuPictureGallery_to_menuPictureViewer"
+            app:destination="@id/menuPictureViewer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuPictureViewer"
+        android:name="hr.rainbow.ui.PictureViewerFragment"
+        android:label="@string/option_menu_title_picture_viewer"
+        tools:layout="@layout/fragment_picture_viewer" />
+
+    <fragment
+        android:id="@+id/menuSearch"
+        android:name="hr.rainbow.ui.SearchFragment"
+        android:label="@string/option_menu_title_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_menuSearch_to_menuSearchResult"
+            app:destination="@id/menuSearchResult" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuSearchResult"
+        android:name="hr.rainbow.ui.SearchResultFragment"
+        android:label="@string/option_menu_title_search_result"
+        tools:layout="@layout/fragment_search_result" />
+
+</navigation>

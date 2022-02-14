@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuDiscover"
+        android:title="@string/menu_title_discover"
+        android:icon="@drawable/home_icon"
+        />
+
+    <item
+        android:id="@+id/menuMyStories"
+        android:title="@string/menu_title_my_stories"
+        android:icon="@drawable/my_story_icon"/>
+
+    <item
+        android:id="@+id/menuFavoriteStories"
+        android:title="@string/menu_title_favorites"
+        android:icon="@drawable/favorite_icon"/>
+
+    <item
+        android:id="@+id/menuScheduler"
+        android:title="@string/menu_title_scheduler"
+        android:icon="@drawable/schedule_icon"/>
+
+</menu>

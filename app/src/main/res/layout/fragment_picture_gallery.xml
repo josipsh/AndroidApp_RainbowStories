@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.PictureGalleryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/picture_gallery_margin_top"
+        android:layout_marginBottom="@dimen/picture_gallery_margin_bottom"
+        android:layout_marginStart="@dimen/picture_gallery_margin_start"
+        android:layout_marginEnd="@dimen/picture_gallery_margin_end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTakeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/take_new_photo"
+            android:layout_marginEnd="@dimen/picture_gallery_btn_margin_end"
+            style="@style/AppTheme.NormalButton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnImportFromGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/import_from_phone_gallery"
+            style="@style/AppTheme.NormalButton"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressBar"
+        style="@style/AppTheme.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/progress_bar_margin"
+        android:indeterminate="true"
+        android:visibility="gone"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:showAnimationBehavior="none"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPictureGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

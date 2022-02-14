@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="entry_activity_margin">50dp</dimen>
+    <dimen name="entry_activity_logo_margin_bottom">50dp</dimen>
+    <dimen name="sign_in_logo_margin_bottom">50dp</dimen>
+    <dimen name="sign_in_margin">15dp</dimen>
+    <dimen name="sign_up_text_field_margin">10dp</dimen>
+    <dimen name="sign_up_margin_top">20dp</dimen>
+    <dimen name="sign_in_btn_margin_top">15dp</dimen>
+    <dimen name="sign_in_text_field_margin_top">50dp</dimen>
+    <dimen name="sign_in_logo_margin_top">50dp</dimen>
+    <dimen name="story_viewer_back_btn_start_margin">10dp</dimen>
+    <dimen name="search_bar_margin">10dp</dimen>
+    <dimen name="search_suggestion_item_margin">15dp</dimen>
+    <dimen name="progress_bar_margin">10dp</dimen>
+    <dimen name="picture_gallery_margin_top">5dp</dimen>
+    <dimen name="picture_gallery_margin_bottom">10dp</dimen>
+    <dimen name="picture_gallery_margin_start">8dp</dimen>
+    <dimen name="picture_gallery_margin_end">5dp</dimen>
+    <dimen name="picture_gallery_btn_margin_end">10dp</dimen>
+    <dimen name="nothing_to_show_text_size">25sp</dimen>
+    <dimen name="nothing_to_show_margin">10dp</dimen>
+</resources>

@@ -1,0 +1,178 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+
+        <item name="colorError">@color/colorError</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
+
+        <item name="android:windowAnimationStyle">@style/AppTheme.ActivityAnimation</item>
+
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="titleTextStyle">@style/AppTheme.ActionBarTitleText</item>
+    </style>
+
+    <style name="AppTheme.ActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorOnPrimary</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="AppTheme.BottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="colorPrimary">@color/colorOnPrimary</item>
+        <item name="colorOnSurface">@color/colorOnSecondary</item>
+    </style>
+
+    <style name="AppTheme.NormalButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/colorOnPrimary</item>
+
+        <item name="shapeAppearance">@style/AppTheme.NormalButton.Shape</item>
+
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:padding">15dp</item>
+
+        <item name="strokeColor">@color/colorOnPrimary</item>
+        <item name="strokeWidth">1.5dp</item>
+
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="rippleColor">@color/colorPrimaryVariant</item>
+
+    </style>
+
+    <style name="AppTheme.NegativeButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/colorError</item>
+
+        <item name="shapeAppearance">@style/AppTheme.NormalButton.Shape</item>
+
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:padding">15dp</item>
+
+        <item name="strokeColor">@color/colorError</item>
+        <item name="strokeWidth">1.5dp</item>
+
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="rippleColor">@color/colorError50</item>
+
+    </style>
+
+    <style name="AppTheme.PositiveButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/colorPositive</item>
+
+        <item name="shapeAppearance">@style/AppTheme.NormalButton.Shape</item>
+
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:padding">15dp</item>
+
+        <item name="strokeColor">@color/colorPositive</item>
+        <item name="strokeWidth">1.5dp</item>
+
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="rippleColor">@color/colorPositive50</item>
+
+    </style>
+
+    <style name="AppTheme.NormalButton.Shape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">160dp</item>
+    </style>
+
+    <style name="AppTheme.TextFieldLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="boxStrokeColor">@color/colorOnPrimary</item>
+        <item name="boxStrokeErrorColor">@color/colorError</item>
+        <item name="hintTextColor">@color/colorOnPrimary</item>
+
+        <item name="colorOnSurface">@color/colorOnPrimary</item>
+        <item name="colorError">@color/colorError</item>
+    </style>
+
+    <style name="AppTheme.TextFieldLayoutTheme" parent="Widget.Design.TextInputLayout">
+        <item name="android:colorControlActivated">@color/colorSecondaryVariant</item>
+    </style>
+
+    <style name="AppTheme.ErrorAlertDialog" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="buttonBarButtonStyle">@style/AppTheme.ErrorAlertDialog.Button</item>
+    </style>
+
+    <style name="AppTheme.ErrorAlertDialog.Button" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorOnPrimary</item>
+    </style>
+
+    <style name="AppTheme.ActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_out_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_in_left</item>
+    </style>
+
+    <style name="AppTheme.SearchInputTextField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="hintTextColor">@color/colorOnPrimary</item>
+
+        <item name="colorOnSurface">@color/colorOnPrimary</item>
+
+        <item name="boxBackgroundColor">@color/colorPrimaryDark</item>
+        <item name="startIconCheckable">true</item>
+        <item name="shapeAppearance">@style/AppTheme.SearchInputTextField.Shape</item>
+    </style>
+
+    <style name="AppTheme.SearchInputTextField.Shape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">160dp</item>
+    </style>
+
+
+    <style name="AppTheme.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.ProgressBar" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="indicatorColor">@color/colorOnPrimary</item>
+    </style>
+
+    <style name="AppTheme.StoryViewerTextStyle.Regular" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.StoryViewerTextStyle.Bold" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.StoryViewerTextStyle.Italic" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="AppTheme.StoryViewerTextStyle.BoldItalic" parent="@android:style/Widget.TextView">
+        <item name="android:textStyle">italic|bold</item>
+    </style>
+
+</resources>

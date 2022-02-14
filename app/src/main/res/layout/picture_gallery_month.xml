@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp">
+
+    <TextView
+        android:id="@+id/tvPictureGalleryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="3.3.2021"
+        android:textSize="30sp"
+        android:layout_marginStart="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPictureGalleryMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        tools:listitem="@layout/picture_gallery_item"/>
+
+</LinearLayout>
